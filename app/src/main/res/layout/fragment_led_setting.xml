@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000">
+
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/led_setting_menu_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/line_size"
+        android:background="#55000000"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_brightness"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/led_setting_menu_brightness" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/led_setting_menu_brightness" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/led_setting_menu_brightness" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/led_setting_menu_brightness" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_brightness"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/led_setting_menu_height"
+        android:layout_above="@+id/ll_menu"
+        android:background="#55000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <CheckBox
+            android:id="@+id/cb_system_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginRight="@dimen/base_margin"
+            android:checked="true"
+            android:text="@string/led_setting_system_brightness" />
+
+        <android.support.v7.widget.AppCompatSeekBar
+            android:id="@+id/sb_brightness"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="255" />
+
+    </LinearLayout>
+
+</RelativeLayout>
